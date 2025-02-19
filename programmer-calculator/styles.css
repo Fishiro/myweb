@@ -97,6 +97,7 @@ body {
 
 #calc {
     font-family: Lexend, sans-serif;
+    font-weight: bold;
     border: none;
     width: 25%;
     margin-top: 20px;

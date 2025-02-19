@@ -14,27 +14,27 @@
         <h1 id="title" style="text-align: center;">PROGRAMMER CALCULATOR</h1>
 
         <div id="input">
-            <input class="input-box" id="number-input" style="border: none;" type="text" id="num1" placeholder="Enter number here!" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeydown="return event.keyCode !== 38 && event.keyCode !== 40;">
+            <input class="input-box" id="number-input" style="border: none;" type="text" id="num1" placeholder="Enter number here!" oninput="this.value = this.value.replace(/[^0-9A-Fa-f]/g, '');" onkeydown="return event.keyCode !== 38 && event.keyCode !== 40;">
             
             <span style="margin: 0 5px 0 5px;">from</span>
 
             <select class="input-box mode" id="num1-mode">
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="decimal">Decimal</option>
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="binary">Binary</option>
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="hexadecimal">Hexadecimal</option>
+                <option class="input-box mode start" style="background-color: rgb(20, 20, 35); border: none;" value="decimal">Decimal</option>
+                <option class="input-box mode start" style="background-color: rgb(20, 20, 35); border: none;" value="binary">Binary</option>
+                <option class="input-box mode start" style="background-color: rgb(20, 20, 35); border: none;" value="hexadecimal">Hexadecimal</option>
             </select>
 
             <span style="margin: 0 5px 0 5px;">to</span>
 
             <select class="input-box mode" id="num2-mode">
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="decimal">Decimal</option>
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="binary">Binary</option>
-                <option class="input-box mode" style="background-color: rgb(20, 20, 35); border: none;" value="hexadecimal">Hexadecimal</option>
+                <option class="input-box mode end" style="background-color: rgb(20, 20, 35); border: none;" value="decimal">Decimal</option>
+                <option class="input-box mode end" style="background-color: rgb(20, 20, 35); border: none;" value="binary">Binary</option>
+                <option class="input-box mode end" style="background-color: rgb(20, 20, 35); border: none;" value="hexadecimal">Hexadecimal</option>
             </select>
         </div>
         
         <div id="result">0</div>
-        <button id="calc" ondlbclick="calculate()">CALCULATE NOW</button>
+        <!-- <button id="calc" ondlbclick="calculate()">CALCULATE NOW</button> -->
         <script src="app.js"></script>
     </div>
 
