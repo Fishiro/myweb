@@ -11,9 +11,9 @@ body {
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    min-height: 350px;
+    min-height: 300px;
     min-width: 650px;
-    height: 65vh;
+    height: 35vh;
     width: 50vw;
     position: absolute;
     left: 50%;
@@ -97,7 +97,6 @@ body {
 
 #calc {
     font-family: Lexend, sans-serif;
-    font-weight: bold;
     border: none;
     width: 25%;
     margin-top: 20px;
