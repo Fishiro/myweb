@@ -1,105 +1,125 @@
-function calculate(){
-    document.getElementById("mode-box1").addEventListener("change", function() {
-        const input = isNaN(parseInt(document.getElementById("number-input").value, 10))?"":parseInt(document.getElementById("number-input").value, 10);
+function calculate() {
+    document
+        .getElementById("mode-box1")
+        .addEventListener("change", function () {
+            const input = isNaN(
+                parseInt(document.getElementById("number-input").value, 10),
+            )
+                ? ""
+                : parseInt(document.getElementById("number-input").value, 10);
 
-        // Get the element
-        const modeBox1 = document.getElementById("mode-box1");
-        const modeBox2 = document.getElementById("mode-box2");
-        const box1 = modeBox1.value;
-        const box2 = modeBox2.value;
+            const box1 = document.getElementById("mode-box1").value;
+            const box2 = document.getElementById("mode-box2").value;
 
-        console.log(`Selected mode 1: ${box1}`);
-        console.log(`Selected mode 2: ${box2}`);
+            console.log(`Selected mode 1: ${box1}`);
+            console.log(`Selected mode 2: ${box2}`);
 
-        const isDecimalToDecimal = box1 === "decimal" && box2 === "decimal";
-        const isDecimalToBinary = box1 === "decimal" && box2 === "binary";
-        const isDecimalToHexadecimal = box1 === "decimal" && box2 === "hexadecimal";
-        const isDecimalToOctal = box1 === "decimal" && box2 === "octal";
+            switch (box1) {
+                case "decimal":
+                    switch (box2) {
+                        case "decimal":
+                            let output = input; // itself
+                            break;
 
-        const isBinaryToBinary = box1 === "binary" && box2 === "binary";
-        const isBinaryToDecimal = box1 === "binary" && box2 === "decimal";
-        const isBinaryToHexadecimal = box1 === "binary" && box2 === "hexadecimal";
-        const isBinaryToOctal = box1 === "binary" && box2 === "octal";
+                        case "binary":
+                            // write logic here
+                            break;
 
-        const isHexadecimalToHexadecimal = box1 === "hexadecimal" && box2 === "hexadecimal";
-        const isHexadecimalToDecimal = box1 === "hexadecimal" && box2 === "decimal";
-        const isHexadecimalToBinary = box1 === "hexadecimal" && box2 === "binary";
-        const isHexadecimalToOctal = box1 === "hexadecimal" && box2 === "octal";
+                        case "hexadecimal":
+                            // write logic here
+                            break;
 
-        const isOctalToOctal = box1 === "octal" && box2 === "octal";
-        const isOctalToDecimal = box1 === "octal" && box2 === "decimal";
-        const isOctalToBinary = box1 === "octal" && box2 === "binary";
-        const isOctalToHexadecimal = box1 === "octal" && box2 === "hexadecimal";
+                        case "octal":
+                            // write logic here
+                            break;
 
-        const isDecimalToBCD = box1 === "decimal" && box2 === "bcd";
+                        default:
+                            break;
+                    }
 
-        function result(value) {
-            return document.getElementById("result").innerText = value;
-        }
-        
-        if (isDecimalToDecimal) {
-            let output = input; // Decimal to Decimal equal itself
+                    break;
+                case "binary":
+                    switch (box2) {
+                        case "decimal":
+                            // write logic here
+                            break;
 
-            result(output);
+                        case "binary":
+                            let output = input; // itself
+                            break;
 
-        } else if (isDecimalToBinary) {
-            let temp = input;
-            let output = ""; 
+                        case "hexadecimal":
+                            // write logic here
+                            break;
 
-            while (temp > 0) {
-                output = (temp % 2) + output;
-                temp = Math.floor(temp / 2);
+                        case "octal":
+                            // write logic here
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    break;
+                case "hexadecimal":
+                    switch (box2) {
+                        case "decimal":
+                            // write logic here
+                            break;
+
+                        case "binary":
+                            // write logic here
+                            break;
+
+                        case "hexadecimal":
+                            let output = input; // itself
+                            break;
+
+                        case "octal":
+                            // write logic here
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    break;
+                case "octal":
+                    switch (box2) {
+                        case "decimal":
+                            // write logic here
+                            break;
+
+                        case "binary":
+                            // write logic here
+                            break;
+
+                        case "hexadecimal":
+                            // write logic here
+                            break;
+
+                        case "octal":
+                            let output = input; // itself
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    break;
+                default:
+                    break;
             }
-            result(output);
-
-        } else if (isDecimalToHexadecimal) {
-
-        } else if (isDecimalToOctal) {
-
-        } else if (isBinaryToBinary) {
-
-        } else if (isBinaryToDecimal) {
-
-        } else if (isBinaryToHexadecimal) {
-
-        } else if (isBinaryToOctal) {
-
-        } else if (isHexadecimalToHexadecimal) {
-
-        } else if (isHexadecimalToDecimal) {
-
-        } else if (isHexadecimalToBinary) {
-
-        } else if (isHexadecimalToOctal) {
-
-        } else if (isOctalToOctal) {
-
-        } else if (isOctalToDecimal) {
-
-        } else if (isOctalToBinary) {
-
-        } else if (isOctalToHexadecimal) {
-
-        } else if (isDecimalToBCD) {
-
-        } else {
-            console.log(`[ERROR CODE: 1] No Operation!`);
-        }
-    });
+        });
 }
 
 setInterval(calculate, 100);
 
-
-
-
 // setInterval(calculate,100);
-
 
 // function calculate(){
 
 // }
-
 
 // function calculate() {
 
@@ -116,8 +136,6 @@ setInterval(calculate, 100);
 
 //     console.log(dec2bin(412));
 
-    
-    
 //     if (isDecimalToBinary) {
 //         document.getElementById("result").innerText = dec2bin(input);
 //     }
@@ -183,7 +201,7 @@ setInterval(calculate, 100);
 //             // } else {
 //                 //     console.log(`(ERROR 1) No Operation Right Now`);
 //                 // }
-                
+
 // }
 
 // document.getElementById("calc").addEventListener("click", calculate);
